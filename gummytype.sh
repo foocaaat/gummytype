@@ -608,11 +608,6 @@ EOM
 
 
 
-if [ $1 == "score" ]
-then
-sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' /tmp/gummyscore | sort -nr | cut -f 2- | head -n 8
-exit
-fi
 
 if [ $1 == "rere" ]
 then
