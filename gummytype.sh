@@ -1,5 +1,4 @@
 #!/bin/bash
-trap '' 2  
 if [ -z ${1+x} ];
 then
     echo お名前は
@@ -423,7 +422,7 @@ Of all the gin joints in all the towns in all the world, she walks into mine.
 Some people don't understand the promises they're making when they make them.
 The burned hand teaches best. After that advice about fire goes to the heart.
 There is no good and evil, there is only power and those too weak to seek it.
-You show me a pay stub for $72,000, I quit my job right now and work for you.
+You show me a pay stub for 72,000, I quit my job right now and work for you.
 By venturing too close to the dragon's flame, you made an ash out of yourself.
 Don't you ever cross that bridge in your mind again. It's like a movie screen.
 I don't care what consequence it brings. I have been a fool for lesser things.
@@ -608,6 +607,11 @@ EOM
 
 
 
+if [ $1 == "score" ]
+then
+sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' /tmp/gummyscore | sort -nr | cut -f 2- | head -n 8
+exit
+fi
 
 if [ $1 == "rere" ]
 then
