@@ -624,7 +624,7 @@ then
           var=$((var + 1))
         done
         clear
-        echo $var
+        echo $var > /tmp/gummyvar
         exit 
     fi
     if [ $2 = 2 ]
@@ -852,6 +852,7 @@ while true; do
         br=$!
         xy=$($0 rere 1 "$i2")
         kill $br
+        xy=$(cat /tmp/gummyvar)
         clear
         if [ "$xy" == "" ]; then
             $0 rere 2 "$i2" "$i"
@@ -868,11 +869,9 @@ while true; do
             fi
             clear
         elif [ "$xy" != "" ]; then
-            yz=$( echo $xy | sed 's@^[^0-9]*\([0-9]\+\).*@\1@' )
-            echo $yz
-            if [ $yz != 0 ]
+            if [ "$xy" -gt 0 ]
             then
-                score=$(($score+1000/$yz))
+                score=$(($score+1000/$xy))
                 export $(echo $i3)=0
 
             fi
