@@ -868,15 +868,7 @@ while true; do
             fi
             clear
         elif [ "$xy" != "" ]; then
-            yz=$(tr -dc '0-9' <<< $xy)
-            echo $yz
-            sleep 4
-            clear
-            yz=${yz:2}
-            echo $yz
-            sleep 4
-            clear
-            echo $xy
+            yz=$( echo $xy | sed 's@^[^0-9]*\([0-9]\+\).*@\1@' )
             echo $yz
             if [ $yz != 0 ]
             then
