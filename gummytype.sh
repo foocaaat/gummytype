@@ -869,7 +869,13 @@ while true; do
             clear
         elif [ "$xy" != "" ]; then
             yz=$(tr -dc '0-9' <<< $xy)
+            echo $yz
+            sleep 4
+            clear
             yz=${yz:2}
+            echo $yz
+            sleep 4
+            clear
             echo $xy
             echo $yz
             if [ $yz != 0 ]
