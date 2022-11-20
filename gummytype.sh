@@ -868,6 +868,7 @@ while true; do
                 echo 
                 echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S')
                 echo GameOver
+                rm /tmp/gummyvar
                 exit
             fi
             clear
