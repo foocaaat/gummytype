@@ -824,6 +824,7 @@ function barr()
     sleep $1
     echo -ne '\n'
     kill $(ps ax | grep "`basename "$0"` rere\ " | awk '{print $1;}')
+    echo > /tmp/gummyvar
 }
 
 clear
