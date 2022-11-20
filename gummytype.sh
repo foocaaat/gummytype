@@ -892,5 +892,4 @@ while true; do
     sleep 1
     echo -ne '[>>>]\r'
     sleep 1
-    stty echo
 done
