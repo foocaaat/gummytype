@@ -290,7 +290,7 @@ You must take life the way it comes at you and make the best of it.
 From there to here, from here to there, funny things are everywhere.
 I been doin' this a long time. I ain't never said nothin' to no cop.
 I'm good at reading people. My secret? I look for the worst in them.
-\"More.\" You want more, you tell me \"more.\" Only time can run me.
+"More." You want more, you tell me "more." Only time can run me.
 The work of today is the history of tomorrow, and we are its makers.
 This is a modern fairy tale. No happy endings, no wind in our sails.
 You are not a drop in the ocean. You are the entire ocean in a drop.
@@ -383,7 +383,7 @@ Since we're all going to die, it's obvious that when and how don't matter.
 The right man in the wrong place can make all the difference in the world.
 You keep using that word. I do not think it means what you think it means.
 You may have done some bad things, but that doesn't mean you're a bad kid.
-\"Ah, music,\" he said, wiping his eyes. \"A magic beyond all we do here!\"
+"Ah, music," he said, wiping his eyes. "A magic beyond all we do here!"
 A kid needs at least one person who never gives up on them, no matter what.
 If you don't know what you want, how are you going to know when you get it?
 I'm not so good with the advice. Can I interest you in a sarcastic comment?
@@ -487,7 +487,7 @@ You know better than you think you know, and you shall live to know me better ye
 A heart is not judged by how much you love but by how much you are loved by others.
 A painter paints pictures on canvas. But musicians paint their pictures on silence.
 Don't argue, my dear child, please don't argue! It's such a waste of precious time!
-Honestly, am I the only person who's ever bothered to read \"Hogwarts: A History?\"
+Honestly, am I the only person who's ever bothered to read "Hogwarts: A History?"
 I don't know why I did the things I did. I don't know why I said the things I said.
 I don't want to kill anyone. I don't like bullies; I don't care where they're from.
 If I lay here, if I just lay here, would you lie with me and just forget the world?
@@ -532,7 +532,7 @@ Just because people do horrible things it doesn't always mean they're horrible p
 Mary Elizabeth is a really nice person underneath the part of her that hates everyone.
 May you find the power in understanding the journey of others to help create your own.
 Remember that all the people in this world haven't had the advantages that you've had.
-The biggest lie I tell myself is: \"I don't need to write it down, I'll remember it.\"
+The biggest lie I tell myself is: "I don't need to write it down, I'll remember it."
 The bully who oppressed your youth isn't at the table with us, perhaps he's long dead.
 The darker the night, the brighter the stars, the deeper the grief, the closer is God.
 The gentleman understands what is moral. The small man understands what is profitable.
