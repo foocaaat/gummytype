@@ -1,4 +1,5 @@
 #!/bin/bash
+stty -ixon
 if [ -z ${1+x} ];
 then
     echo お名前は
