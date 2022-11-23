@@ -841,6 +841,7 @@ while true; do
         export prompt2=
         i3=$(tr ' ' 'a' <<< $i2)
         i3=$(tr "\'" 'a' <<< $i3)
+        i3=$(tr "\"" 'a' <<< $i3)
         export $(echo $i3)=$(($(echo $i3)+1))
         eval "export i4=\$$i3"
         clear
