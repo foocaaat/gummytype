@@ -838,11 +838,14 @@ while true; do
     count=6
     for i in $(seq $count); do
         export i=$(echo "$nonolistee" | shuf -n 1)
+        echo $i >> /tmp/log
         export i2=$(echo "$i" | sed 's|[;!@#$%^&*?()_+,.-={};.:,]||g' | tr '[:upper:]' '[:lower:]')
+        echo $i2 >> /tmp/log
         export prompt2=
         i3=$(tr ' ' 'a' <<< $i2)
         i3=$(tr "\'" 'a' <<< $i3)
         i3=$(tr "\"" 'a' <<< $i3)
+        i3=$(tr "\-" 'a' <<< $i3)
         export $(echo $i3)=$(($(echo $i3)+1))
         eval "export i4=\$$i3"
         clear
@@ -864,7 +867,7 @@ while true; do
             if [ $i4 = 2 ]
             then
                 clear
-                echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S') >> /tmp/gummyscore
+                echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S') >> .cache/gummyscore
                 sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' /tmp/gummyscore | sort -nr | cut -f 2- | head -n 8
                 echo 
                 echo 
