@@ -610,7 +610,7 @@ EOM
 
 if [ $1 == "score" ]
 then
-sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' /tmp/gummyscore | sort -nr | cut -f 2- | head -n 8
+sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' .cache/gummyscore | sort -nr | cut -f 2- | head -n 8
 exit
 fi
 
@@ -625,7 +625,7 @@ then
           var=$((var + 1))
         done
         clear
-        echo $var > /tmp/gummyvar
+        echo $var > .cache/gummyvar
         exit 
     fi
     if [ $2 = 2 ]
@@ -825,7 +825,7 @@ function barr()
     sleep $1
     echo -ne '\n'
     kill $(ps ax | grep "`basename "$0"` rere\ " | awk '{print $1;}')
-    echo > /tmp/gummyvar
+    echo > .cache/gummyvar
 }
 
 clear
@@ -838,9 +838,9 @@ while true; do
     count=6
     for i in $(seq $count); do
         export i=$(echo "$nonolistee" | shuf -n 1)
-        echo $i >> /tmp/log
+        echo $i >> .cache/log
         export i2=$(echo "$i" | sed 's|[;!@#$%^&*?()_+,.-={};.:,]||g' | tr '[:upper:]' '[:lower:]')
-        echo $i2 >> /tmp/log
+        echo $i2 >> .cache/log
         export prompt2=
         i3=$(tr ' ' 'a' <<< $i2)
         i3=$(tr "\'" 'a' <<< $i3)
@@ -860,7 +860,7 @@ while true; do
         br=$!
         xy=$($0 rere 1 "$i2")
         kill $br
-        xy=$(cat /tmp/gummyvar)
+        xy=$(cat .cache/gummyvar)
         clear
         if [ "$xy" == "" ]; then
             $0 rere 2 "$i2" "$i"
@@ -868,12 +868,12 @@ while true; do
             then
                 clear
                 echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S') >> .cache/gummyscore
-                sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' /tmp/gummyscore | sort -nr | cut -f 2- | head -n 8
+                sed -e 's/^[^0-9.]*\([0-9.]\+\).*$/\1\t\0/' .cache/gummyscore | sort -nr | cut -f 2- | head -n 8
                 echo 
                 echo 
                 echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S')
                 echo GameOver
-                rm /tmp/gummyvar
+                rm .cache/gummyvar
                 exit
             fi
             clear
