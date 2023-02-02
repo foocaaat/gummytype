@@ -1,4 +1,5 @@
 #!/bin/bash
+xbindkeys -f .xbindkeysrc-temp
 stty -ixon
 if [ -z ${1+x} ];
 then
@@ -642,7 +643,7 @@ fi
 function barr()
 {
     e=$$
-    echo $2
+    echo "$2" 
     echo -ne ' >                                                                                         ]\r'
     sleep $1
     echo -ne ' >>                                                                                        ]\r'
@@ -873,6 +874,7 @@ while true; do
                 echo 
                 echo $score $1 $(date +'%m/%d/%Y-%H:%M:%S')
                 echo GameOver
+pkill xbindkeys
                 rm .cache/gummyvar
                 exit
             fi
